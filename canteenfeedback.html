@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Feedback Form</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f6efe4;
+        color: #333;
+    }
+
+    .header {
+        background: #efc2b2;
+        padding: 25px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .logo {
+        width: 50px;
+        height: 50px;
+        border: 4px solid #333;
+        border-radius: 50%;
+    }
+
+    .header-text h3 {
+        margin: 0;
+        letter-spacing: 2px;
+        font-size: 14px;
+    }
+
+    .header-text h1 {
+        margin: 5px 0 0;
+        font-size: 28px;
+        letter-spacing: 3px;
+    }
+
+    .container {
+        padding: 40px 80px;
+    }
+
+    .note {
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .row {
+        display: flex;
+        gap: 40px;
+        margin-bottom: 25px;
+    }
+
+    .row label {
+        font-weight: bold;
+    }
+
+    .row input {
+        border: none;
+        border-bottom: 1px solid #333;
+        background: transparent;
+        width: 150px;
+        outline: none;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 30px;
+    }
+
+    th, td {
+        padding: 12px;
+        text-align: center;
+    }
+
+    th {
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    td:first-child {
+        text-align: left;
+        width: 45%;
+        font-weight: bold;
+    }
+
+    input[type="checkbox"] {
+        width: 18px;
+        height: 18px;
+    }
+
+    .improve {
+        margin-top: 40px;
+        font-weight: bold;
+    }
+
+    textarea {
+        width: 100%;
+        height: 120px;
+        margin-top: 10px;
+        border: 2px solid #333;
+        background: transparent;
+        resize: none;
+    }
+
+    .footer {
+        text-align: center;
+        margin: 30px 0;
+        letter-spacing: 2px;
+        font-size: 14px;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <div class="logo"></div>
+    <div class="header-text">
+        <h1>CANTEEN FEEDBACK FORM</h1>
+    </div>
+</div>
+
+<div class="container">
+
+    <p class="note">
+        Please fill out this feedback form as you see fit to help us improve our service
+    </p>
+
+    <div class="row">
+        <label>Name <input type="text" style="width:200px"></label>
+        <label>Admission number <input type="text"></label>
+    </div>
+
+    <p class="note">
+        Please fill out this feedback form as you see fit to help us improve our service
+    </p>
+
+    <table>
+        <tr>
+            <th></th>
+            <th>Outstanding</th>
+            <th>Excellent</th>
+            <th>Better</th>
+            <th>Good</th>
+            
+        </tr>
+
+        <tr>
+            <td>THE QUALITY OF FOOD SERVED </td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+        
+        </tr>
+
+        <tr>
+            <td>THE TASTE OF FOOD</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+        
+        </tr>
+
+        <tr>
+            <td>THE FOOD IS SERVED AT THE RIGHT TEMPERATURE</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            
+        </tr>
+
+        <tr>
+            <td>THE CANTEEN DINNING AREA IS CLEAN AND WELL-MAINTAINED</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+    
+        </tr>
+
+        <tr>
+            <td>UTENSILS AND PLATES ARE CLEAN</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            
+        </tr>
+
+        <tr>
+            <td>THE CANTEEN STAFF IS POLITE AND HELPFUL</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+        
+        </tr>
+
+        <tr>
+            <td>FOOD SERVICE IS QUICK AND WELL-ORGANIZED</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            
+        </tr>
+
+        <tr>
+            <td>THE FOOD PROVIEDS GOOD VALUE FOR MONEY</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+    
+        </tr>
+    </table>
+
+    <div class="improve">
+        Which areas do you believe require improvement?
+        <textarea></textarea>
+    </div>
+
+</div>
+
+<div class="footer">
+    www.reallygreatsite.com
+</div>
+
+</body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Library Feedback Form</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #ffffff;
+        color: #333;
+        margin: 0;
+        padding: 40px;
+    }
+
+    h1 {
+        font-weight: normal;
+        margin-bottom: 10px;
+    }
+
+    p {
+        margin-bottom: 30px;
+        color: #555;
+    }
+
+    h3 {
+        margin-top: 40px;
+        margin-bottom: 10px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 30px;
+    }
+
+    th, td {
+        padding: 10px;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    th {
+        font-weight: normal;
+        color: #666;
+    }
+
+    td:first-child {
+        text-align: left;
+        width: 35%;
+        color: #444;
+    }
+
+    input[type="radio"] {
+        width: 16px;
+        height: 16px;
+    }
+
+    .suggestions label {
+        display: block;
+        margin: 15px 0 5px;
+        font-weight: bold;
+    }
+
+    textarea {
+        width: 100%;
+        height: 60px;
+        border: 1px solid #ccc;
+        padding: 8px;
+        resize: none;
+    }
+
+    .btn {
+        margin-top: 30px;
+        background: #444;
+        color: white;
+        border: none;
+        padding: 12px 25px;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        background: #222;
+    }
+</style>
+</head>
+
+<body>
+
+<h1>Library Feedback Form</h1>
+<p>
+    Help us improve our service by checking the appropriate answer.
+    We appreciate your help!
+</p>
+
+<!-- 1. Staff -->
+<h3>1. Staff</h3>
+<table>
+    <tr>
+        <th></th>
+        <th>Very Good</th>
+        <th>Good</th>
+        <th>Fair</th>
+        <th>Poor</th>
+    </tr>
+    <tr>
+        <td>Accommodation</td>
+        <td><input type="radio" name="staff1"></td>
+        <td><input type="radio" name="staff1"></td>
+        <td><input type="radio" name="staff1"></td>
+        <td><input type="radio" name="staff1"></td>
+    </tr>
+    <tr>
+        <td>Competence</td>
+        <td><input type="radio" name="staff2"></td>
+        <td><input type="radio" name="staff2"></td>
+        <td><input type="radio" name="staff2"></td>
+        <td><input type="radio" name="staff2"></td>
+    </tr>
+    <tr>
+        <td>Efficiency</td>
+        <td><input type="radio" name="staff3"></td>
+        <td><input type="radio" name="staff3"></td>
+        <td><input type="radio" name="staff3"></td>
+        <td><input type="radio" name="staff3"></td>
+    </tr>
+    <tr>
+        <td>Effectiveness</td>
+        <td><input type="radio" name="staff4"></td>
+        <td><input type="radio" name="staff4"></td>
+        <td><input type="radio" name="staff4"></td>
+        <td><input type="radio" name="staff4"></td>
+    </tr>
+</table>
+
+<!-- 2. Environment -->
+<h3>2. Environment</h3>
+<table>
+    <tr>
+        <th></th>
+        <th>Very Good</th>
+        <th>Good</th>
+        <th>Fair</th>
+        <th>Poor</th>
+        <th>Very Poor</th>
+    </tr>
+    <tr>
+        <td>Ambience</td>
+        <td><input type="radio" name="env1"></td>
+        <td><input type="radio" name="env1"></td>
+        <td><input type="radio" name="env1"></td>
+        <td><input type="radio" name="env1"></td>
+        <td><input type="radio" name="env1"></td>
+    </tr>
+    <tr>
+        <td>Ventilation</td>
+        <td><input type="radio" name="env2"></td>
+        <td><input type="radio" name="env2"></td>
+        <td><input type="radio" name="env2"></td>
+        <td><input type="radio" name="env2"></td>
+        <td><input type="radio" name="env2"></td>
+    </tr>
+    <tr>
+        <td>Lighting</td>
+        <td><input type="radio" name="env3"></td>
+        <td><input type="radio" name="env3"></td>
+        <td><input type="radio" name="env3"></td>
+        <td><input type="radio" name="env3"></td>
+        <td><input type="radio" name="env3"></td>
+    </tr>
+    <tr>
+        <td>Equipment</td>
+        <td><input type="radio" name="env4"></td>
+        <td><input type="radio" name="env4"></td>
+        <td><input type="radio" name="env4"></td>
+        <td><input type="radio" name="env4"></td>
+        <td><input type="radio" name="env4"></td>
+    </tr>
+</table>
+
+<!-- 3. Services -->
+<h3>3. Services</h3>
+<table>
+    <tr>
+        <th></th>
+        <th>Very Good</th>
+        <th>Good</th>
+        <th>Fair</th>
+        <th>Poor</th>
+        <th>Very Poor</th>
+    </tr>
+    <tr>
+        <td>OPAC (Online Public Access Catalog)</td>
+        <td><input type="radio" name="ser1"></td>
+        <td><input type="radio" name="ser1"></td>
+        <td><input type="radio" name="ser1"></td>
+        <td><input type="radio" name="ser1"></td>
+        <td><input type="radio" name="ser1"></td>
+    </tr>
+    <tr>
+        <td>Internet Services</td>
+        <td><input type="radio" name="ser2"></td>
+        <td><input type="radio" name="ser2"></td>
+        <td><input type="radio" name="ser2"></td>
+        <td><input type="radio" name="ser2"></td>
+        <td><input type="radio" name="ser2"></td>
+    </tr>
+    <tr>
+        <td>Multimedia Services</td>
+        <td><input type="radio" name="ser3"></td>
+        <td><input type="radio" name="ser3"></td>
+        <td><input type="radio" name="ser3"></td>
+        <td><input type="radio" name="ser3"></td>
+        <td><input type="radio" name="ser3"></td>
+    </tr>
+    <tr>
+        <td>Reference / Special Collection Services</td>
+        <td><input type="radio" name="ser4"></td>
+        <td><input type="radio" name="ser4"></td>
+        <td><input type="radio" name="ser4"></td>
+        <td><input type="radio" name="ser4"></td>
+        <td><input type="radio" name="ser4"></td>
+    </tr>
+</table>
+
+<!-- 4. Collections -->
+<h3>4. Collections</h3>
+<table>
+    <tr>
+        <th></th>
+        <th>Very Good</th>
+        <th>Good</th>
+        <th>Fair</th>
+        <th>Poor</th>
+        <th>Very Poor</th>
+    </tr>
+    <tr>
+        <td>Relevance</td>
+        <td><input type="radio" name="col1"></td>
+        <td><input type="radio" name="col1"></td>
+        <td><input type="radio" name="col1"></td>
+        <td><input type="radio" name="col1"></td>
+        <td><input type="radio" name="col1"></td>
+    </tr>
+    <tr>
+        <td>Physical Condition</td>
+        <td><input type="radio" name="col2"></td>
+        <td><input type="radio" name="col2"></td>
+        <td><input type="radio" name="col2"></td>
+        <td><input type="radio" name="col2"></td>
+        <td><input type="radio" name="col2"></td>
+    </tr>
+    <tr>
+        <td>Variety</td>
+        <td><input type="radio" name="col3"></td>
+        <td><input type="radio" name="col3"></td>
+        <td><input type="radio" name="col3"></td>
+        <td><input type="radio" name="col3"></td>
+        <td><input type="radio" name="col3"></td>
+    </tr>
+    <tr>
+        <td>Availability</td>
+        <td><input type="radio" name="col4"></td>
+        <td><input type="radio" name="col4"></td>
+        <td><input type="radio" name="col4"></td>
+        <td><input type="radio" name="col4"></td>
+        <td><input type="radio" name="col4"></td>
+    </tr>
+</table>
+
+<!-- Suggestions -->
+<h3>Do you have any suggestions on how we can serve you better?</h3>
+<div class="suggestions">
+    <label>Staff:</label>
+    <textarea></textarea>
+
+    <label>Environment:</label>
+    <textarea></textarea>
+
+    <label>Services:</label>
+    <textarea></textarea>
+
+    <label>Collections:</label>
+    <textarea></textarea>
+</div>
+
+<button class="btn">SEND FEEDBACK</button>
+
+</body>
+</html>

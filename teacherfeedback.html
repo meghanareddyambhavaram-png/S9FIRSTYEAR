@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Feedback Form</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #ffffff;
+        padding: 30px;
+    }
+
+    .form-box {
+        border: 1px solid #000;
+        padding: 25px;
+        max-width: 900px;
+        margin: auto;
+    }
+
+    h2 {
+        text-align: center;
+        text-decoration: underline;
+        margin-bottom: 25px;
+    }
+
+    .top-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    .instructions {
+        text-align: center;
+        font-size: 13px;
+        margin-bottom: 15px;
+    }
+
+    .section {
+        border: 1px solid #000;
+        padding: 12px;
+        margin-bottom: 15px;
+        font-size: 14px;
+    }
+
+    .section-title {
+        font-weight: bold;
+        text-decoration: underline;
+        margin-bottom: 8px;
+    }
+
+    .question {
+        display: flex;
+        justify-content: space-between;
+        margin: 5px 0;
+    }
+
+    .scale {
+        word-spacing: 10px;
+    }
+
+    .long-line {
+        border-bottom: 1px solid #000;
+        display: inline-block;
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .thanks {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 14px;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="form-box">
+
+    <h2> Student FeedBack Form</h2>
+
+    <div class="top-row">
+        <div>Name: ____________</div>
+        <div>Admission no: ____________</div>
+    </div>
+
+    <div class="top-row">
+        <div>Subject Name: ________________</div>
+        
+    </div>
+
+    <p class="instructions">
+        (Instructions: Just mark by circle where ever you find appropriate)
+    </p>
+
+    <!-- CONTENT -->
+    <div class="section">
+        <div class="section-title">CONTENT</div>
+        <div class="question">
+            <span>Was the content interesting?</span>
+            <span>Yes &nbsp;&nbsp; No</span>
+        </div>
+        <div class="question">
+            <span>Was the content understandable?</span>
+            <span>Yes &nbsp;&nbsp; No</span>
+        </div>
+        <div class="question">
+            <span>Was there clarity in the content?</span>
+            <span>Yes &nbsp;&nbsp; No</span>
+        </div>
+    </div>
+
+    <!-- STRUCTURE -->
+    <div class="section">
+        <div class="section-title">STRUCTURE</div>
+        <div>(Rate from 1–5 where 1 being the least)</div>
+        <div class="question">
+            <span>How was the focus of the talk good?</span>
+            <span class="scale">1 2 3 4 5</span>
+        </div>
+        <div class="question">
+            <span>How far you found the lecture useful?</span>
+            <span class="scale">1 2 3 4 5</span>
+        </div>
+        <div class="question">
+            <span>How far did the lecture meet your expectations?</span>
+            <span class="scale">1 2 3 4 5</span>
+        </div>
+        <div>
+            What struck you about this topic?
+            <div class="long-line"></div>
+        </div>
+    </div>
+
+    <!-- PRESENTATION -->
+    <div class="section">
+        <div class="section-title">PRESENTATION</div>
+        <div>(Rate from 1–5 where 1 being the least)</div>
+        <div class="question">
+            <span>How far the lecturer managed to capture your attention?</span>
+            <span class="scale">1 2 3 4 5</span>
+        </div>
+        <div class="question">
+            <span>How did you find the lecturer vocabulary?</span>
+            <span class="scale">1 2 3 4 5</span>
+        </div>
+        <div class="question">
+            <span>How far audience participation & interaction encouraged?</span>
+            <span class="scale">1 2 3 4 5</span>
+        </div>
+        <div class="question">
+            <span>How far the lecturer appeared enthusiastic about the subject?</span>
+            <span class="scale">1 2 3 4 5</span>
+        </div>
+    </div>
+
+    <!-- OVERALL -->
+    <div class="section">
+        <div class="section-title">OVERALL</div>
+        <div class="question">
+            <span>Were you satisfied with the lecture?</span>
+            <span>Yes &nbsp;&nbsp; No</span>
+        </div>
+        <div class="question">
+            <span>Was the lecturer able to answer your questions?</span>
+            <span>Yes &nbsp;&nbsp; No</span>
+        </div>
+        <div class="question">
+            <span>What is your overall impression about the lecture?</span>
+            <span>Good &nbsp; Average &nbsp; Ok</span>
+        </div>
+        <div>
+            What suggestions do you have to improve the lecturer's approach?
+            <div class="long-line"></div>
+            <div class="long-line"></div>
+        </div>
+    </div>
+
+    <div class="thanks">
+        Thank you for your Participation!
+    </div>
+
+</div>
+
+</body>
+</html>

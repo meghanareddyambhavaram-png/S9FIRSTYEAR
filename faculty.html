@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Faculty Hostel Feedback</title>
+
+<style>
+body{
+  font-family:Arial;
+  background:#f4f6f9;
+  padding:20px;
+}
+h2{ text-align:center; }
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  background:#fff;
+}
+th, td{
+  border:1px solid #ccc;
+  padding:10px;
+  text-align:center;
+}
+th{
+  background:#0284c7;
+  color:#fff;
+}
+.summary{
+  margin-top:25px;
+  background:#fff;
+  padding:15px;
+  border-radius:8px;
+}
+</style>
+</head>
+
+<body>
+
+<h2>Hostel Feedback – Faculty Dashboard</h2>
+
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Name</th>
+<th>ID</th>
+<th>Rating</th>
+<th>Comment</th>
+<th>Date</th>
+</tr>
+</thead>
+<tbody id="tableBody"></tbody>
+</table>
+
+<div class="summary">
+<h3>Rating Summary</h3>
+<ul id="summaryList"></ul>
+</div>
+
+<script>
+const data = JSON.parse(localStorage.getItem("hostelFeedback")) || [];
+const tableBody = document.getElementById("tableBody");
+const summaryList = document.getElementById("summaryList");
+
+if(data.length === 0){
+  tableBody.innerHTML = "<tr><td colspan='6'>No feedback available</td></tr>";
+}
+
+// Table display
+data.forEach((f, i) => {
+  tableBody.innerHTML += `
+    <tr>
+      <td>${i+1}</td>
+      <td>${f.name}</td>
+      <td>${f.sid}</td>
+      <td>${f.rating}</td>
+      <td>${f.comment}</td>
+      <td>${f.date}</td>
+    </tr>
+  `;
+});
+
+// Rating summary
+let count = {Excellent:0, Good:0, Average:0, Poor:0};
+
+data.forEach(f => {
+  if(count[f.rating] !== undefined){
+    count[f.rating]++;
+  }
+});
+
+for(let key in count){
+  summaryList.innerHTML += `<li>${key}: ${count[key]}</li>`;
+}
+</script>
+
+</body>
+</html>

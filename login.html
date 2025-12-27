@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Smart Login</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{box-sizing:border-box;font-family:'Segoe UI',sans-serif}
+body{
+  margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,#7c3aed,#ec4899)
+}
+.card{
+  width:400px;padding:30px;border-radius:18px;
+  background:#fff;box-shadow:0 20px 50px rgba(0,0,0,.25)
+}
+h2{text-align:center;color:#7c3aed}
+.role-switch{display:flex;gap:10px;margin:20px 0}
+.role-switch button{
+  flex:1;padding:10px;border:none;border-radius:10px;
+  background:#ede9fe;font-weight:600;cursor:pointer
+}
+.role-switch .active{background:#7c3aed;color:#fff}
+input{
+  width:100%;padding:12px;border-radius:10px;
+  border:1px solid #d1d5db;margin-bottom:15px
+}
+.actions{display:flex;gap:10px}
+.login-btn,.reset-btn{
+  flex:1;padding:12px;border:none;border-radius:12px;
+  font-weight:bold;cursor:pointer;color:#fff
+}
+.login-btn{background:#7c3aed}
+.reset-btn{background:#f43f5e}
+.links{text-align:center;margin-top:15px;font-size:13px}
+.links a{color:#7c3aed;text-decoration:none;font-weight:600}
+.error{color:#dc2626;text-align:center;font-size:13px}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+<h2>Smart Login</h2>
+
+<div class="role-switch">
+  <button id="studentBtn" class="active">Student</button>
+  <button id="facultyBtn">Faculty</button>
+
+</div>
+
+<form onsubmit="login(event)">
+  <input type="text" placeholder="Email / ID" required>
+  <input type="password" id="password" placeholder="Password" required>
+
+  <div class="actions">
+    
+    <button class="login-btn">Login</button>
+
+  </div>
+
+  <div class="error" id="error"></div>
+</form>
+
+<div class="links">
+  <a href="forgot.html">Forgot Password?</a> |
+  <a href="reset.html">Reset Password</a>
+</div>
+</div>
+
+<script>
+let role="student";
+
+// initialize passwords
+if(!localStorage.getItem("studentPwd")){
+  localStorage.setItem("studentPwd","student123");
+  localStorage.setItem("facultyPwd","faculty123");
+}
+
+studentBtn.onclick=()=>{
+  role="student";
+  studentBtn.classList.add("active");
+  facultyBtn.classList.remove("active");
+};
+facultyBtn.onclick=()=>{
+  role="faculty";
+  facultyBtn.classList.add("active");
+  studentBtn.classList.remove("active");
+};
+
+function login(e){
+  e.preventDefault();
+  const pwd=document.getElementById("password").value;
+  const stored=role==="student"?
+    localStorage.getItem("studentPwd"):
+    localStorage.getItem("facultyPwd");
+
+  if(pwd===stored){
+    window.location.href = role==="student"?
+      "student.html":"faculty.html";
+  }else{
+    document.getElementById("error").textContent="Invalid password!";
+  }
+}
+</script>
+
+</body>
+</html>
